@@ -1,60 +1,5 @@
 --[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-========                                    .-----.          ========
-========         .----------------------.   | === |          ========
-========         |.-""""""""""""""""""-.|   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
-========         ||                    ||   |-----|          ========
-========         ||:Tutor              ||   |:::::|          ========
-========         |'-..................-'|   |____o|          ========
-========         `"")----------------(""`   ___________      ========
-========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-========       /:::========|  |==hjkl==:::\  \ required \    ========
-========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-========                                                     ========
-=====================================================================
-=====================================================================
-
-What is Kickstart?
-
-  Kickstart.nvim is *not* a distribution.
-
-  Kickstart.nvim is a starting point for your own configuration.
-    The goal is that you can read every line of code, top-to-bottom, understand
-    what your configuration is doing, and modify it to suit your needs.
-
-    Once you've done that, you can start exploring, configuring and tinkering to
-    make Neovim your own! That might mean leaving Kickstart just the way it is for a while
-    or immediately breaking it into modular pieces. It's up to you!
-
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
-      - https://learnxinyminutes.com/docs/lua/
-
     After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
-
-Kickstart Guide:
-
-  TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
-
-    If you don't know what this means, type the following:
-      - <escape key>
-      - :
-      - Tutor
-      - <enter key>
-
-    (If you already know the Neovim basics, you can skip this step.)
-
-  Once you've completed that, you can continue working through **AND READING** the rest
-  of the kickstart init.lua.
 
   Next, run AND READ `:help`.
     This will open up a help window with some basic information
@@ -69,11 +14,8 @@ Kickstart Guide:
 If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
 --]]
 
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
--- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
 require 'core.options'
@@ -105,7 +47,6 @@ vim.opt.rtp:prepend(lazypath)
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -132,43 +73,32 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   ---- Search utils
-  -- Useful plugin to show you pending keybinds.
-  require 'kickstart.plugins.which-key',
-  -- Fuzzy finder
-  require 'kickstart.plugins.telescope',
+  require 'kickstart.plugins.which-key', -- Useful plugin to show you pending keybinds.
+  require 'kickstart.plugins.telescope', -- Fuzzy finder
 
   ---- LSP Plugins
-  -- Configures Lua LSP for Neovim config, runtime and plugins
-  require 'kickstart.plugins.lazydev',
-  -- Main LSP Configuration
-  require 'kickstart.plugins.lsp-config',
+  require 'kickstart.plugins.lazydev', -- Configures Lua LSP for Neovim config, runtime and plugins
+  require 'kickstart.plugins.lsp-config', -- Main LSP Configuration
 
   ---- Syntax highlighting, formatting, etc.
-  -- Autoformat
-  require 'kickstart.plugins.conform',
-  -- Autocomplete
-  require 'kickstart.plugins.blink',
-  -- Highlight todo, notes, etc in comments
-  require 'kickstart.plugins.todo-comments',
-  -- Collection of small utils: text objects, surround, status line, etc.
-  require 'kickstart.plugins.mini',
-  -- Highlight edit, and navigate code
-  require 'kickstart.plugins.treesitter',
-  -- Visual indentation (vertical lines)
-  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.conform', -- Autoformat
+  require 'kickstart.plugins.blink', -- Autocomplete
+  require 'kickstart.plugins.todo-comments', -- Highlight todo, notes, etc in comments
+  require 'kickstart.plugins.mini', -- Collection of small utils: text objects, surround, status line, etc.
+  require 'kickstart.plugins.treesitter', -- Highlight edit, and navigate code
+  require 'kickstart.plugins.indent_line', -- Visual indentation (vertical lines)
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- File explorer
-  require 'kickstart.plugins.neo-tree',
 
   ---- Git integration
-  -- Adds gitsigns recommend keymaps
-  require 'kickstart.plugins.gitsigns',
+  require 'kickstart.plugins.gitsigns', -- Adds gitsigns recommend keymaps
+
+  require 'kickstart.plugins.neo-tree', -- File explorer
 
   ---- Colorschemes
-  require 'kickstart.colors.tokyonight',
+  require 'kickstart.colors.tokyonight', -- good color support for many plugins
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
