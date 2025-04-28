@@ -88,6 +88,9 @@ require('lazy').setup({
   require 'kickstart.colors.kanagawa', -- good color support for many plugins
   require 'kickstart.colors.everforest', -- good color support for many plugins
 
+  require 'custom.plugins.goyo',
+  require 'custom.plugins.vim-markdown',
+
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   -- { import = 'custom.plugins' },
   --
