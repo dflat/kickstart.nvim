@@ -28,13 +28,25 @@ return { -- Autoformat
         }
       end
     end,
+    formatters = {
+      blackd = {
+        command = vim.fn.expand '~/.local/share/nvim/mason/bin/blackd-client',
+        args = {}, -- Optional: --fast skips some checks for speed
+        stdin = true,
+      },
+      isort = { -- Optional: include if you use isort
+        command = vim.fn.expand '~/.local/share/nvim/mason/packages/isort/venv/bin/isort',
+        args = { '--stdout', '--filename', '$FILENAME', '-' },
+        stdin = true,
+      },
+    },
     formatters_by_ft = {
       lua = { 'stylua' },
       -- Conform can also run multiple formatters sequentially
-      -- python = { "isort", "black" },
+      python = { 'blackd' }, -- {'isort', 'black' },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
-      -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
     },
   },
 }
