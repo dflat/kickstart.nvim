@@ -75,7 +75,7 @@ require('lazy').setup({
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
 
   ---- Git integration
   require 'kickstart.plugins.gitsigns', -- Adds gitsigns recommend keymaps
