@@ -26,9 +26,11 @@ return {
     ]]
 
     -- Auto-enable Goyo for markdown files
-    vim.api.nvim_create_autocmd('FileType', {
-      pattern = 'markdown',
+    vim.api.nvim_create_autocmd('BufWinEnter', {
+      pattern = '*.md',
       callback = function()
+        print 'Goyo entered'
+        vim.g.goyo_width = 40
         vim.cmd 'Goyo'
       end,
     })
