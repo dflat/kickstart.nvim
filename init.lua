@@ -99,6 +99,9 @@ require('lazy').setup({
 
   ---- Colorschemes
   require 'kickstart.colors.tokyonight', -- good color support for many plugins
+  require 'kickstart.colors.catppuccin', -- good color support for many plugins
+  require 'kickstart.colors.kanagawa', -- good color support for many plugins
+  require 'kickstart.colors.everforest', -- good color support for many plugins
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
@@ -132,5 +135,6 @@ require('lazy').setup({
   },
 })
 
+vim.cmd 'colorscheme everforest'
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
