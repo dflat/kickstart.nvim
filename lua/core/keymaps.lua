@@ -25,6 +25,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<leader>ww', '<cmd>w<cr>', { desc = 'write buffer' })
 vim.keymap.set('n', '<leader>wq', '<cmd>wq<cr>', { desc = 'write buffer and quit window' })
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'quit all windows' })
+vim.keymap.set('n', '<leader>hh', '<cmd>q<cr>', { desc = '[h]ide current window' })
+vim.keymap.set('n', '<leader>ho', '<cmd>on<cr>', { desc = '[h]ide [o]ther windows' })
 
 vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv", { desc = 'move selection down' })
 vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'move selection up' })
