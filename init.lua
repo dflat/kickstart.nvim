@@ -29,20 +29,15 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [[ Configure and install plugins ]]
 --
---  To check the current status of your plugins, run
+--  To check the current status of all plugins
 --    :Lazy
 --
---  You can press `?` in this menu for help.
+--  Press `?` in this menu for help.
 --
---  To update plugins you can run
+--  To update plugins
 --    :Lazy update
 --
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
-  --
-  -- This is often very useful to both group configuration, as well as handle
-  -- lazy loading plugins that don't need to be loaded immediately at startup.
   -- may trigger load on autocommands events (`:help autocmd-events`).
 
   -- Then, because we use the `opts` key (recommended), the configuration runs
@@ -94,9 +89,6 @@ require('lazy').setup({
 
   require 'custom.plugins.toggleterm',
 
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  -- { import = 'custom.plugins' },
-  --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
@@ -123,9 +115,4 @@ require('lazy').setup({
   },
 })
 
--- vim.cmd 'colorscheme everforest'
-
 require('onedark').load()
-
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
