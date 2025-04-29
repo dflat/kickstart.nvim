@@ -61,7 +61,7 @@ return {
           set_jumps = true,
           goto_next_start = {
             [']p'] = '@parameter.inner',
-            ['<leader>p'] = '@parameter.inner',
+            ['<leader>a'] = '@parameter.inner',
             [']m'] = '@function.outer',
             [']]'] = '@class.outer',
           },

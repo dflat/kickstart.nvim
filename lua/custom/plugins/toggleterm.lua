@@ -79,7 +79,7 @@ return {
     end, { desc = 'Toggle htop' })
 
     -- Custom terminal 3 (example)
-    local python = Terminal:new { cmd = 'python', hidden = true }
+    local python = Terminal:new { cmd = 'python3', hidden = true }
     vim.keymap.set('n', '<leader>py', function()
       python:toggle()
     end, { desc = 'Toggle python' })
