@@ -92,6 +92,8 @@ require('lazy').setup({
   require 'custom.plugins.goyo',
   require 'custom.plugins.vim-markdown',
 
+  require 'custom.plugins.toggleterm',
+
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   -- { import = 'custom.plugins' },
   --
