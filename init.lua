@@ -51,6 +51,7 @@ require('lazy').setup({
   -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'tpope/vim-repeat', -- Add `.` support to more motions
 
   ---- Search utils
   require 'kickstart.plugins.which-key', -- Useful plugin to show you pending keybinds.
@@ -88,6 +89,7 @@ require('lazy').setup({
   require 'custom.plugins.vim-markdown',
 
   require 'custom.plugins.toggleterm',
+  require 'custom.plugins.leap',
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
