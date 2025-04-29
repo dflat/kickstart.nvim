@@ -26,6 +26,9 @@ vim.keymap.set('n', '<leader>ww', '<cmd>w<cr>', { desc = 'write buffer' })
 vim.keymap.set('n', '<leader>wq', '<cmd>wq<cr>', { desc = 'write buffer and quit window' })
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'quit all windows' })
 
+vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv", { desc = 'move selection down' })
+vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'move selection up' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
