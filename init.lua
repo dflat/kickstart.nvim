@@ -87,6 +87,7 @@ require('lazy').setup({
   require 'kickstart.colors.catppuccin', -- good color support for many plugins
   require 'kickstart.colors.kanagawa', -- good color support for many plugins
   require 'kickstart.colors.everforest', -- good color support for many plugins
+  require 'kickstart.colors.onedark', -- good color support for many plugins
 
   require 'custom.plugins.goyo',
   require 'custom.plugins.vim-markdown',
@@ -120,6 +121,9 @@ require('lazy').setup({
   },
 })
 
-vim.cmd 'colorscheme everforest'
+-- vim.cmd 'colorscheme everforest'
+
+require('onedark').load()
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
