@@ -11,14 +11,14 @@ return {
         set noshowmode
         set noshowcmd
         set scrolloff=999
-        colorscheme habamax
+        "colorscheme habamax
       endfunction
 
       function! s:goyo_leave()
         set showmode
         set showcmd
         set scrolloff=5
-        silent! colorscheme ${g:original_colorscheme}
+        "silent! colorscheme ${g:original_colorscheme}
       endfunction
 
       autocmd! User GoyoEnter nested call <SID>goyo_enter()
