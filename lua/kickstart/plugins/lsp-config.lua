@@ -177,7 +177,31 @@ return {
     local servers = {
       clangd = {},
       -- gopls = {},
-      pyright = {},
+      ruff = {
+        settings = {
+          args = { '--select=ALL', '--ignore=E501,F821' },
+        },
+      },
+      pyright = {
+        settings = {
+          pyright = {
+            disableLanguageServices = false,
+            disableOrganizeImports = false,
+          },
+          python = {
+            analysis = {
+              autoSearchPaths = true,
+              typeCheckingMode = 'basic',
+              diagnosticSeverityOverrides = {
+                reportAttributeAccessIssue = 'none', -- Suppress attribute access issues
+                reportOptionalMemberAccess = 'none', -- Suppress optional member access issues
+                reportUnknownMemberType = 'none', -- Suppress unknown member type issues
+                reportGeneralTypeIssues = 'warning', -- Broader suppression for type issues
+              },
+            },
+          },
+        },
+      },
       -- rust_analyzer = {},
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
