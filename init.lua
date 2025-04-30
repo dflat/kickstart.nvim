@@ -67,6 +67,7 @@ require('lazy').setup({
   require 'kickstart.plugins.todo-comments', -- Highlight todo, notes, etc in comments
   require 'kickstart.plugins.mini', -- Collection of small utils: text objects, surround, status line, etc.
   require 'kickstart.plugins.treesitter', -- Highlight edit, and navigate code
+  require 'kickstart.plugins.treesitter-textobjects', -- keep e.g. function signature at top of buffer
   require 'kickstart.plugins.treesitter-context', -- keep e.g. function signature at top of buffer
   require 'kickstart.plugins.indent_line', -- Visual indentation (vertical lines)
 
