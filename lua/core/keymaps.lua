@@ -31,6 +31,9 @@ vim.keymap.set('n', '<leader>ho', '<cmd>on<cr>', { desc = '[h]ide [o]ther window
 vim.keymap.set('v', 'J', ":m '>+1<cr>gv=gv", { desc = 'move selection down' })
 vim.keymap.set('v', 'K', ":m '<-2<cr>gv=gv", { desc = 'move selection up' })
 
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'delete to void and paste' })
+vim.keymap.set('x', '<leader>d', '"_d', { desc = 'delete to void' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
