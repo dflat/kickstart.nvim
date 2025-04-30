@@ -85,11 +85,7 @@ require('lazy').setup({
   require 'kickstart.colors.everforest', -- good color support for many plugins
   require 'kickstart.colors.onedark', -- good color support for many plugins
 
-  require 'custom.plugins.goyo',
-  require 'custom.plugins.vim-markdown',
-
-  require 'custom.plugins.toggleterm',
-  require 'custom.plugins.leap',
+  require 'custom.plugins', -- load plugins not included in kickstart config
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

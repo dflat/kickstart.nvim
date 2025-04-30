@@ -2,4 +2,10 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-return {}
+return {
+  require 'custom.plugins.goyo', -- focus mode for reading text
+  require 'custom.plugins.vim-markdown', -- mardown rendering
+
+  require 'custom.plugins.toggleterm', -- embedded terminal in nvim
+  require 'custom.plugins.leap', -- sneak.vim replacement
+}
