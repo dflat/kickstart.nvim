@@ -55,14 +55,14 @@ return {
           swap_previous = {},
         },
         -- optionally add lsp_interop later
-        -- lsp_interop = {
-        --   enable = true,
-        --   border = "none",
-        --   peek_definition_code = {
-        --     ["<leader>df"] = "@function.outer",
-        --     ["<leader>dc"] = "@class.outer",
-        --   },
-        -- },
+        lsp_interop = {
+          enable = true,
+          border = 'none',
+          peek_definition_code = {
+            ['<leader>df'] = '@function.outer',
+            ['<leader>dc'] = '@class.outer',
+          },
+        },
       },
     }
   end,
