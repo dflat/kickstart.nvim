@@ -26,14 +26,14 @@ return {
     ]]
 
     -- Auto-enable Goyo for markdown files
-    vim.api.nvim_create_autocmd('BufWinEnter', {
-      pattern = '*.md',
-      callback = function()
-        print 'Goyo entered'
-        vim.g.goyo_width = 40
-        vim.cmd 'Goyo'
-      end,
-    })
+    -- vim.api.nvim_create_autocmd('BufWinEnter', {
+    --   pattern = '*.md',
+    --   callback = function()
+    --     print 'Goyo entered'
+    --     vim.g.goyo_width = 40
+    --     vim.cmd 'Goyo'
+    --   end,
+    -- })
   end,
   keys = {
     -- Optional: Manual toggle keybinding
