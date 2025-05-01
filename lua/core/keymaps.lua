@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lowe
 vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<leader>ww', '<cmd>w<cr>', { desc = 'write buffer' })
-vim.keymap.set('n', '<leader>wq', '<cmd>wq<cr>', { desc = 'write buffer and quit window' })
+vim.keymap.set('n', '<leader>wq', '<cmd>wqa<cr>', { desc = 'write buffer and quit window' })
 vim.keymap.set('n', '<leader>qq', '<cmd>qa<cr>', { desc = 'quit all windows' })
 vim.keymap.set('n', '<leader>hh', '<cmd>q<cr>', { desc = '[h]ide current window' })
 vim.keymap.set('n', '<leader>ho', '<cmd>on<cr>', { desc = '[h]ide [o]ther windows' })
