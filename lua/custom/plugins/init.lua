@@ -8,4 +8,6 @@ return {
 
   require 'custom.plugins.toggleterm', -- embedded terminal in nvim
   require 'custom.plugins.leap', -- sneak.vim replacement
+
+  require 'custom.plugins.surround', -- vim-surround replacement
 }
