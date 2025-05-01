@@ -10,4 +10,6 @@ return {
   require 'custom.plugins.leap', -- sneak.vim replacement
 
   require 'custom.plugins.surround', -- vim-surround replacement
+
+  require 'custom.plugins.windows', -- window manager
 }
