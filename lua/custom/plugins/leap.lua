@@ -17,8 +17,8 @@ return {
     -- Add default keymaps (s for forward, S for backward search)
     -- leap.add_default_mappings()
     -- leap.set_default_mappings()
-    vim.keymap.set({ 'n', 'x', 'o' }, 'ys', '<Plug>(leap)', { desc = 'leap to digraph in window' })
-    vim.keymap.set('n', 'yS', '<Plug>(leap-from-window)')
+    vim.keymap.set({ 'n', 'x', 'o' }, '<leader>gb', '<Plug>(leap)', { desc = 'leap to digraph in window' })
+    vim.keymap.set('n', '<leader>gw', '<Plug>(leap-from-window)')
 
     -- Custom highlight groups (optional)
     vim.api.nvim_set_hl(0, 'LeapMatch', { fg = 'white', bold = true, nocombine = true })
