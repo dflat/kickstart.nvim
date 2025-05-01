@@ -13,8 +13,6 @@ require 'core.options'
 require 'core.keymaps'
 require 'core.autocmds'
 
-require 'utils.blackd_launcher' -- python formatter daemon
-
 require 'utils.lazy' -- use lazy package manager
 
 -- [[ Configure and install plugins ]]
@@ -104,5 +102,8 @@ require('lazy').setup({
     },
   },
 })
+
+require 'utils.blackd_launcher' -- python formatter daemon
+require 'utils.hot_reload' -- hot reloading of require'd modules via :R(mod-name)
 
 require('onedark').load()
