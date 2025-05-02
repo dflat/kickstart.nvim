@@ -12,5 +12,6 @@ return {
   require 'custom.plugins.surround', -- vim-surround replacement
 
   require 'custom.plugins.windows', -- window manager
+  require 'custom.plugins.possession', -- session manager
   require 'custom.plugins.alpha', -- greeter / splashscreen
 }
